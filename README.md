@@ -2,6 +2,10 @@
 
 Edited by RabbitTV and used on rabbit-network.net
 
+This pack changes the Overworld 2.0 generation, also adding the Golden Maple Forest biome. 
+
+it is recommended to use a datapack that increases world height as block *can* generate higher than 320.
+
 The default overworld configuration for Terra 6.0+, containing over _140_ different biomes.
 
 You can find Terra - the main project this config pack is designed for
