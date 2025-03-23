@@ -1,0 +1,56 @@
+id: GOLDEN_MAPLE_FOREST
+type: BIOME
+extends:
+ # - ENVIRONMENT_LAND_CONTINENTAL_MONSOON
+#  - EQ_MULTI_TERRACED_LAND
+  - EQ_LAND
+  - CARVING_LAND
+  - BASE
+color: $biomes/colors.yml:GOLDEN_MAPLE_FOREST
+
+tags:
+  - LAND_CAVES
+  - USE_RIVER
+
+vanilla: minecraft:taiga
+
+colors:
+  grass: 0xadce67
+  foliage: 0xfc9105
+  water: 0x0b77e2
+  water-fog: 0x1e97f2
+
+palette:
+  - GRASS_ONLY_PODZOL: $meta.yml:top-y
+  - << meta.yml:palette-ocean-level-sand
+  - << meta.yml:palette-underwater
+  - << meta.yml:palette-bottom
+
+slant:
+  - threshold: 0.8
+    palette:
+      - GRASS: $meta.yml:top-y
+      - << meta.yml:palette-underwater
+      - << meta.yml:palette-bottom
+  - threshold: 0.4
+    palette:
+      - ONLY_ROCK_SLANT: $meta.yml:top-y
+      - << meta.yml:palette-bottom
+
+features:
+  flora:
+    - GRASS
+    - POPPY_PATCH
+    - DANDELION_PATCH
+ #   - ROSE_BUSH_PATCH
+ #   - PEONY_PATCH
+ #   - MIXED_FLOWER_COVER
+    - LILY_OF_THE_VALLEY_PATCH
+    - PUMPKIN_PATCHES
+    - WHEAT_PATCHES
+#  crops:
+  #  - WHEAT_PATCHES
+  trees:
+    - MAPLE_TREES
+    - SPARSE_FALLEN_OAK_TREES
+    - SKINNY_MAPLE_TREES

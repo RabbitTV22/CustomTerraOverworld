@@ -1,5 +1,7 @@
 # Terra Overworld Config
 
+Edited by RabbitTV and used on rabbit-network.net
+
 The default overworld configuration for Terra 6.0+, containing over _140_ different biomes.
 
 You can find Terra - the main project this config pack is designed for

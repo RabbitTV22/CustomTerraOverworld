@@ -1,0 +1,36 @@
+id: SKINNY_MAPLE_TREES
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 15
+  padding: 3
+  salt: 9592
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: ${meta.yml:ocean-level} + 3
+        max: ${meta.yml:ocean-level} + 200
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/vegetation/meta.yml:dry-plantable-blocks
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:podzol
+          - minecraft:air
+          - minecraft:moss_block
+        offset: 0
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: skinny_maple_tree
