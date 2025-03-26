@@ -1,0 +1,52 @@
+id: LEAF_LITTER
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: SAMPLER
+      sampler:
+        type: POSITIVE_WHITE_NOISE
+      threshold: 0.75
+    - type: SAMPLER
+      sampler: $features/vegetation/trees/sakura_trees.yml:mask.sampler
+      threshold: $features/vegetation/trees/sakura_trees.yml:mask.threshold
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range: &range
+        min: ${meta.yml:ocean-level} + 1
+        max: $meta.yml:top-y
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks: $features/vegetation/meta.yml:dry-plantable-blocks
+        offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
+
+structures:
+  distribution: 
+    type: EXPRESSION
+    expression: sampler(x, z) # Using this to ensure 2D sampler is used
+    samplers:
+      sampler:
+        dimensions: 2
+        type: LINEAR
+        min: 0
+        max: $features/vegetation/trees/sakura_trees.yml:mask.threshold
+        sampler: $features/vegetation/trees/sakura_trees.yml:mask.sampler
+  structures: 
+    - leaf_litter_4: 1
+    - leaf_litter_3: 1
+    - leaf_litter_2: 1
+    - leaf_litter_1: 1
