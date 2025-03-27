@@ -1,4 +1,4 @@
-id: RABBIT
+id: OVERWORLD
 version: 2.0.0
 author: "Astrash, Sancires, Aureus, RogueShade"
 
@@ -27,7 +27,6 @@ addons:
   structure-block-shortcut: "1.+"
   terrascript-function-sampler: "1.+"
   locator-slant-noise-3d: "1.+"
- # itemsadder-addon: "1.+"
 
 # ---
 # Biome distribution
