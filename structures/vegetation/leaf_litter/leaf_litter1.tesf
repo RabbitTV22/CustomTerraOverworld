@@ -1,4 +1,4 @@
-str blockID = "minecraft:leaf_litter[flower_amount=1,";
+str blockID = "minecraft:leaf_litter[segment_amount=1,";
 
 num dir = sampler("positiveWhiteNoise", originX(), originZ());
 if(dir < 0.25) blockID = blockID + "facing=north]";
