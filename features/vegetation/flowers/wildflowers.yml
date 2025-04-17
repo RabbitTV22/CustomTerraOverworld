@@ -46,7 +46,7 @@ structures:
         max: $features/vegetation/trees/sakura_trees.yml:mask.threshold
         sampler: $features/vegetation/trees/sakura_trees.yml:mask.sampler
   structures: 
-    - wildflowers_4: 1
-    - wildflowers_3: 1
-    - wildflowers_2: 1
-    - wildflowers_1: 1
+    - wildflowers4: 1
+    - wildflowers3: 1
+    - wildflowers2: 1
+    - wildflowers1: 1
