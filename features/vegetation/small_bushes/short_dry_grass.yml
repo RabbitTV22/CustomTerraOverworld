@@ -1,4 +1,4 @@
-id: DRY_GRASS
+id: SHORT_DRY_GRASS
 type: FEATURE
 
 distributor:
@@ -24,4 +24,4 @@ locator:
 structures:
   distribution:
     type: CONSTANT
-  structures: dry_grass
+  structures: short_dry_grass
