@@ -1,4 +1,4 @@
-id: PINK_PETALS
+id: LEAF_LITTER
 type: FEATURE
 
 distributor:
@@ -72,7 +72,7 @@ structures:
                 frequency: 0.01
                 salt: 98340
   structures: 
-    - pink_petals_4: 1
-    - pink_petals_3: 1
-    - pink_petals_2: 1
-    - pink_petals_1: 1
+    - leaf_litter4: 1
+    - leaf_litter3: 1
+    - leaf_litter2: 1
+    - leaf_litter1: 1

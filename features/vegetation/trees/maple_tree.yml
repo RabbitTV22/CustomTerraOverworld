@@ -1,6 +1,7 @@
 id: MAPLE_TREES
 type: FEATURE
 
+
 distributor:
   type: PADDED_GRID
   width: 10
