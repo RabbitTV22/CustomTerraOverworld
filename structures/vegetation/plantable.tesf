@@ -6,6 +6,7 @@ if (blockBelow != "minecraft:grass_block" &&
     blockBelow != "minecraft:dirt"        &&
     blockBelow != "minecraft:coarse_dirt" &&
     blockBelow != "minecraft:moss_block" &&
+    blockBelow != "minecraft:mud" &&
     blockBelow != "minecraft:rooted_dirt") {
     fail;
 }
