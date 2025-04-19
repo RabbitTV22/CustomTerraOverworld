@@ -1,21 +1,6 @@
 id: EVERGREEN_TREES
 type: FEATURE
-mask: &mask
-  sampler:
-    type: PROBABILITY
-    sampler:
-      type: DOMAIN_WARP
-      amplitude: 10
-      warp:
-        type: GAUSSIAN
-      sampler:
-        type: FBM
-        octaves: 2
-        sampler:
-          type: OPEN_SIMPLEX_2
-          frequency: 0.01
-          salt: 98341
-  threshold: 0.4
+
 distributor:
   type: AND
   distributors:
