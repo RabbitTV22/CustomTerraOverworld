@@ -12,7 +12,7 @@ for (num p = 0; p < count; p = p + 1) {
   num y = 10;
   while (!structure(x, y, z, "plantable", "NONE")) {
     y = y - 1;
-    if (y < -5) fail;
+    if (y < -10) fail;
   }
   block(x, y, z, "minecraft:bush");
 }

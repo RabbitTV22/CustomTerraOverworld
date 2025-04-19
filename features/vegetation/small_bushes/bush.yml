@@ -2,27 +2,53 @@ id: BUSH
 type: FEATURE
 
 distributor:
-  type: PADDED_GRID
-  width: 20
-  padding: 2
-  salt: 1510
+  type: AND
+  distributors:
+    - type: SAMPLER
+      sampler:
+        type: POSITIVE_WHITE_NOISE
+      threshold: 0.6
+    - type: SAMPLER
+      sampler: 
+          type: PROBABILITY
+          sampler:
+            type: DOMAIN_WARP
+            amplitude: 5
+            warp:
+              type: GAUSSIAN
+            sampler:
+              type: FBM
+              octaves: 2
+              sampler:
+                type: OPEN_SIMPLEX_2
+                frequency: 10
+                salt: 34552
+      threshold: 0.8
 
 locator:
   type: AND
   locators:
     - type: TOP
       range: &range
-        min: ${meta.yml:ocean-level} + 3
-        max: ${meta.yml:ocean-level} + 119
+        min: ${meta.yml:ocean-level} + 1
+        max: $meta.yml:top-y
     - type: PATTERN
       range: *range
       pattern:
         type: MATCH_SET
         blocks: $features/vegetation/meta.yml:dry-plantable-blocks
         offset: -1
+    - type: PATTERN
+      range: *range
+      pattern:
+        type: MATCH_SET
+        blocks:
+          - minecraft:snow
+          - minecraft:air
+        offset: 0
 
 structures:
-  distribution:
+  distribution: 
     type: EXPRESSION
     expression: sampler(x, z) # Using this to ensure 2D sampler is used
     threshold: 0.8
@@ -45,5 +71,5 @@ structures:
               sampler:
                 type: OPEN_SIMPLEX_2
                 frequency: 10
-                salt: 24365
+                salt: 5674
   structures: bush
