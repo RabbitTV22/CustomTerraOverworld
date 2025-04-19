@@ -2,74 +2,41 @@ id: BUSH
 type: FEATURE
 
 distributor:
-  type: AND
-  distributors:
-    - type: SAMPLER
-      sampler:
-        type: POSITIVE_WHITE_NOISE
-      threshold: 0.6
-    - type: SAMPLER
-      sampler: 
-          type: PROBABILITY
-          sampler:
-            type: DOMAIN_WARP
-            amplitude: 5
-            warp:
-              type: GAUSSIAN
-            sampler:
-              type: FBM
-              octaves: 2
-              sampler:
-                type: OPEN_SIMPLEX_2
-                frequency: 10
-                salt: 34552
-      threshold: 0.8
+  type: SAMPLER
+  sampler:
+    type: POSITIVE_WHITE_NOISE
+    salt: 3456
+  threshold: 0.05
 
 locator:
   type: AND
   locators:
-    - type: TOP
+    - type: SURFACE
       range: &range
         min: ${meta.yml:ocean-level} + 1
         max: $meta.yml:top-y
     - type: PATTERN
       range: *range
       pattern:
-        type: MATCH_SET
-        blocks: $features/vegetation/meta.yml:dry-plantable-blocks
-        offset: -1
-    - type: PATTERN
-      range: *range
-      pattern:
-        type: MATCH_SET
-        blocks:
-          - minecraft:snow
-          - minecraft:air
-        offset: 0
+        type: OR
+        patterns:
+          - type: MATCH_SET
+            blocks: $features/vegetation/meta.yml:dry-plantable-blocks
+            offset: -1
+          - type: MATCH_SET
+            blocks:
+              - minecraft:grass_block
+              - minecraft:moss_block
+              - minecraft:mycelium
+              - minecraft:podzol
+              - minecraft:dirt
+              - minecraft:coarse_dirt
+              - minecraft:rooted_dirt
+              - minecraft:mud
+            offset: -1
 
 structures:
-  distribution: 
-    type: EXPRESSION
-    expression: sampler(x, z) # Using this to ensure 2D sampler is used
-    threshold: 0.8
-    samplers:
-      sampler:
-        dimensions: 2
-        type: LINEAR
-        min: 0.1
-        max: 0.6
-        sampler:
-          type: PROBABILITY
-          sampler:
-            type: DOMAIN_WARP
-            amplitude: 3
-            warp:
-              type: GAUSSIAN
-            sampler:
-              type: FBM
-              octaves: 2
-              sampler:
-                type: OPEN_SIMPLEX_2
-                frequency: 10
-                salt: 5674
-  structures: bush
+  distribution:
+    type: CONSTANT
+  structures:
+    - BLOCK:minecraft:bush: 1
