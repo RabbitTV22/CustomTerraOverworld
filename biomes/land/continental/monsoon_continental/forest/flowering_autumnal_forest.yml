@@ -14,6 +14,8 @@ features:
     - GRASS
     - MIXED_FLOWER_COVER
     - PUMPKIN_PATCHES
+    - WILDFLOWERS
+    - BUSH
   trees:
     - SEASONAL_TREES
     - SPARSE_FALLEN_BIRCH_TREES
