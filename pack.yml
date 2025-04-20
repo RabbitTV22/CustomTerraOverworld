@@ -100,6 +100,15 @@ stages:
   - id: river-decoration
     type: FEATURE
   
+  # Used for leaf litter, wildflowers, and pink petals
+  - id: carpets
+    type: FEATURE
+    blend:
+      amplitude: 14
+      sampler:
+        type: GAUSSIAN
+        salt: 32532
+
   # Used for larger things that generate on the surface like trees, some other features are
   # also treated as trees like ice spikes.
   - id: trees
