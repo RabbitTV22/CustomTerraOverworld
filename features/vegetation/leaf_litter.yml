@@ -34,10 +34,10 @@ locator:
         max: $meta.yml:top-y
     - type: PATTERN
       range: *range
-      pattern:
-        type: MATCH_SET
-        blocks: $features/vegetation/meta.yml:dry-plantable-blocks
-        offset: -1
+      # pattern:
+      #   type: MATCH_SET
+      #   blocks: $features/vegetation/meta.yml:dry-plantable-blocks
+      #   offset: -1
     - type: PATTERN
       range: *range
       pattern:
