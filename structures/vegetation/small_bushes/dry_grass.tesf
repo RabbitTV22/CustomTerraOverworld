@@ -18,8 +18,12 @@ for (num p = 0; p < count; p = p + 1) {
   // Check from top downwards for valid spawn
   num y = 5;
   while (!structure(x, y, z, "plantable_dry_grass", "NONE")) {
+    y = y -1;
+    if (y < -10) fail;
+  }
+  while (!structure(x2, y, z2, "plantable_dry_grass", "NONE")) {
     y = y - 1;
-    if (y < -5) fail;
+    if (y < -10) fail;
   }
   block(x, y, z, "minecraft:short_dry_grass");
   block(x2, y, z2, "minecraft:tall_dry_grass");
