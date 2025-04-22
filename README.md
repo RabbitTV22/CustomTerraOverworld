@@ -8,7 +8,7 @@ Please use version 1.21.4+ since this pack has the Pale Garden biome.
 
 it is recommended to use a datapack that increases world height as block *can* generate higher than 320.
 
-The default overworld configuration for Terra 6.0+, containing over _140_ different biomes.
+The default overworld configuration for Terra 6.6+, containing over _140_ different biomes.
 
 You can find Terra - the main project this config pack is designed for
 [here](https://github.com/PolyhedralDev/Terra).
