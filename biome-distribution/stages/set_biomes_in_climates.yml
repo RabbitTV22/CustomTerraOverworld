@@ -57,7 +57,7 @@ stages:
           - AUTUMNAL_FOREST: 1
           - GOLDEN_MAPLE_FOREST: 1
           - FLOWERING_AUTUMNAL_FOREST: 1
-          - BIRCH_FOREST: 1
+          - BIRCH_FOREST: 2
         boreal-hot:
           - AUTUMNAL_FOREST: 1
           - FLOWERING_AUTUMNAL_FOREST: 1
@@ -69,7 +69,7 @@ stages:
           - AUTUMNAL_FOREST: 1
           - GOLDEN_MAPLE_FOREST: 1
           - FLOWERING_AUTUMNAL_FOREST: 1
-          - BIRCH_FOREST: 1
+          - BIRCH_FOREST: 2
         boreal-warm:
           - REDWOOD_FOREST: 1
           - TAIGA: 5
@@ -128,6 +128,7 @@ stages:
         boreal-coast-flat:
           - ROCKY_ARCHIPELAGO: 5
           - SHALE_BEACH: 1
+          - COASTAL_PINE_BARRENS: 1
         boreal-coast:
           - ROCKY_SEA_CAVES: 1
         boreal-coast-highlands:
@@ -203,7 +204,6 @@ stages:
           - RAINFOREST: 1
           - BROADLEAF_FOREST: 1
           - DARK_FOREST: 1
-      #    - PALE_GARDEN: 1
           - SAKURA_GROVE: 1
           - WOODED_BUTTES: 1
         temperate-warm-highlands:
@@ -223,7 +223,6 @@ stages:
           - RAINFOREST: 1
           - BROADLEAF_FOREST: 1
           - DARK_FOREST: 1
-     #     - PALE_GARDEN: 1
           - SAKURA_GROVE: 1
           - WOODED_BUTTES: 1
         temperate-cold-highlands:
@@ -232,8 +231,9 @@ stages:
           - TEMPERATE_MOUNTAINS: 1
 
         temperate-coast-flat:
-          - BEACH: 1
-          - SHRUB_BEACH: 1
+          - BEACH: 2
+          - SHRUB_BEACH: 2
+          - COASTAL_PINE_BARRENS: 1
         temperate-coast:
           - TEMPERATE_SEA_ARCHES: 1
         temperate-coast-highlands:
