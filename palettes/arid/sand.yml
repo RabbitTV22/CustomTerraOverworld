@@ -7,6 +7,7 @@ layers:
     layers: 2
   - materials:
       - minecraft:sandstone: 1
+      - minecraft:note_block[instrument=bell,note=19,powered=true]: 1
     layers: 2
   - materials:
       - minecraft:stone: 1

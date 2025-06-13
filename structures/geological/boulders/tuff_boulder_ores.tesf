@@ -1,0 +1,4 @@
+num blockSelection = randomInt(34);
+if(blockSelection <= 13) block(0, 0, 0, "minecraft:tuff");
+else if (blockSelection <= 27) block(0, 0, 0, "minecraft:note_block[instrument=bell,note=18,powered=true]");
+else if(blockSelection <= 33) block(0, 0, 0, "minecraft:raw_iron_block");

@@ -1,0 +1,4 @@
+num blockSelection = randomInt(1000)/1000;
+if (blockSelection <= 0.4) block(0, 0, 0,"minecraft:sandstone");
+if (blockSelection <= 0.8) block(0, 0, 0,"minecraft:note_block[instrument=bell,note=19,powered=true]");
+else block(0, 0, 0,"minecraft:smooth_sandstone");
